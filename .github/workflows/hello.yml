@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Welcome Message
-              run: echo ${{env.GREETING_MESSAGE}}
+              run: echo ${{vars.GREETING_MESSAGE}}
             
             - name: Login with Username and Password
-              run: echo login with username=${{env.ACCOUNT_USERNAME}}and password=${{secrets.ACCOUNT_PASSWORD}}
+              run: echo login with username=${{vars.ACCOUNT_USERNAME}}and password=${{secrets.ACCOUNT_PASSWORD}}
