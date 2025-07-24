@@ -25,4 +25,4 @@ jobs:
                 name: helloFile
 
             - name: Read hello.txt
-              run: cat helloFile
+              run: cat hello.txt
