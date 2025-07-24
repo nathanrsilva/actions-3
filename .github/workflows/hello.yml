@@ -3,7 +3,7 @@ name: Hello
 on: push
 
 jobs:
-    primeiro_job:
+    initial_job:
         runs-on: ubuntu-latest
         steps:
             - name: Welcome Message
@@ -11,3 +11,15 @@ jobs:
             
             - name: Login with Username and Password
               run: echo login with username=${{vars.ACCOUNT_USERNAME}}and password=${{secrets.ACCOUNT_PASSWORD}}
+
+    file_job:
+        runs-on: ubuntu-latest
+        steps:
+            # - name: Checkout Repository
+            #   uses: actions/checkout@v4
+            
+            - name: Write File
+              run: echo "Let's do this!" >> lets.txt
+
+            - name: Read File
+              run: cat ./lets.txt
