@@ -9,8 +9,20 @@ jobs:
             - name: Hello World File
               run: echo Hello World! >> hello.txt
               
+            - name: Upload hello file
+              uses: actions/upload-artifact@v4
+              with:
+                name: helloFile
+                path: ./hello.txt
+
     read_file:
         runs-on: ubuntu-latest
         steps:
+
+            - name: Download helloFile
+              uses: actions/download-artifact@v4
+              with:
+                name: helloFile
+
             - name: Read hello.txt
-              run: cat hello.txt
+              run: cat helloFile
