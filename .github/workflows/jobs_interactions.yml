@@ -1,0 +1,16 @@
+name: Jobs Interactions
+
+on: workflow_dispatch
+
+jobs:
+    create_file:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Hello World File
+              run: echo Hello World! >> hello.txt
+              
+    read_file:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Read hello.txt
+              run: cat hello.txt
