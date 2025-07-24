@@ -12,12 +12,9 @@ jobs:
             - name: Login with Username and Password
               run: echo login with username=${{vars.ACCOUNT_USERNAME}}and password=${{secrets.ACCOUNT_PASSWORD}}
 
-    file_job:
+    file_job_virtual_level:
         runs-on: ubuntu-latest
-        steps:
-            # - name: Checkout Repository
-            #   uses: actions/checkout@v4
-            
+        steps: 
             - name: Write File
               run: echo "Let's do this!" >> lets.txt
 
@@ -26,3 +23,9 @@ jobs:
 
             - name: List All Files
               run: ls -ltra
+    file_job_repository_level:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Read REAME.md File
+              run: cat README.md
+
