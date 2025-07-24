@@ -5,14 +5,9 @@ on: push
 jobs:
     primeiro_job:
         runs-on: ubuntu-latest
-        env:
-            GREETING_MESSAGE: That's is bro!
-            USERNAME: SrDaMex1
         steps:
             - name: Welcome Message
-              run: echo $GREETING_MESSAGE
+              run: echo ${{env.GREETING_MESSAGE}}
             
             - name: Login with Username and Password
-              env:
-                PASSWORD: nathan123123
-              run: echo login with username=$USERNAME and password=$PASSWORD
+              run: echo login with username=${{env.ACCOUNT_USERNAME}}and password=${{secrets.ACCOUNT_PASSWORD}}
