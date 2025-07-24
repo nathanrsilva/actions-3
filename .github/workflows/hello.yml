@@ -7,4 +7,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Welcome Message
-              run: echo Hello World!
+              env:
+                GREETING_MESSAGE: Greetings, my friend!
+              run: echo $GREETING_MESSAGE
