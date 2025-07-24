@@ -27,8 +27,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Repository
-              run: actions/checkout@v4
+              uses: actions/checkout@v4
 
             - name: Read REAME.md File
-              run: cat ../README.md
+              run: cat README.md
 
