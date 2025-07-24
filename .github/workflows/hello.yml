@@ -23,3 +23,6 @@ jobs:
 
             - name: Read File
               run: cat ./lets.txt
+
+            - name: List All Files
+              run: ls -ltra
