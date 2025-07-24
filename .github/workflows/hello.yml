@@ -5,8 +5,8 @@ on: push
 jobs:
     primeiro_job:
         runs-on: ubuntu-latest
+        env:
+            GREETING_MESSAGE: That's is bro!
         steps:
             - name: Welcome Message
-              env:
-                GREETING_MESSAGE: Greetings, my friend!
               run: echo $GREETING_MESSAGE
