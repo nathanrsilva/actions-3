@@ -16,6 +16,7 @@ jobs:
                 path: ./hello.txt
 
     read_file:
+        needs: create_file
         runs-on: ubuntu-latest
         steps:
 
@@ -25,4 +26,4 @@ jobs:
                 name: helloFile
 
             - name: Read hello.txt
-              run: cat hello.txt
+              run: cat helloFile
