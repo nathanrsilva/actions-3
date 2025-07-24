@@ -1,0 +1,10 @@
+name: Hello
+
+on: push
+
+jobs:
+    primeiro_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Welcome Message
+              run: echo Hello World!
